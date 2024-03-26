@@ -1,0 +1,53 @@
+---
+import '../styles/faqs.css';
+---
+
+<div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is web domain and hosting?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        </div>
+      </div>
+      <!-- Agrega más elementos .faq-item aquí -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is web domain and hosting?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+
+  // Inicializar todas las respuestas como contraídas
+  answer.style.maxHeight = null;
+
+  question.addEventListener('click', () => {
+    // Alternar la clase 'active' en el elemento .faq-item
+    item.classList.toggle('active');
+
+    // Alternar la altura máxima de la respuesta
+    if (item.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    } else {
+      answer.style.maxHeight = null;
+    }
+  });
+});
+</script>

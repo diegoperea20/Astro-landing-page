@@ -1,0 +1,20 @@
+.copyright-area {
+  background: #202020;
+  width: 100%;
+}
+
+.copyright-area p {
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.copyright-area a {
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  text-decoration: none;
+}
+.copyright-area a:hover {
+  color: #f6fa0a;
+}

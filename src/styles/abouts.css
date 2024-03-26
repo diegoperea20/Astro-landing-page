@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.container {
+  max-width: 800px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.illustration {
+    margin-bottom: 20px;
+    width: 50%; /* Nueva línea */
+  }
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+.div-contain-image {
+  display: flex;
+  width: 100%;
+}
+
+.div-contain-image p {
+    width: 50%; /* Nueva línea */
+    margin-left: 10px; /* Para dar espacio entre la imagen y el párrafo */
+  }
+.content-text-about {
+  margin-bottom: 20px;
+}
+

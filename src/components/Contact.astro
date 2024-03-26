@@ -1,0 +1,78 @@
+---
+import '../styles/contact.css';
+
+---
+<div class="container">
+    <h1>Contact Us</h1>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="info-box">
+          <h2>Address:</h2>
+          <p>Calle 11 </p>
+          <p>PSB 12345, Colombia</p>
+        </div>
+        <div class="info-box">
+          <h2>Phone:</h2>
+          <p>+1 1234 56 789</p>
+          <p>+1 1234 56 780</p>
+        </div>
+        <div class="info-box">
+          <h2>Email:</h2>
+          <p>info@example.com</p>
+          <p>email@example.com</p>
+        </div>
+      </div>
+      <div class="form-container">
+        <div class="form-fields">
+            <input type="text" placeholder="Name*" class="input-field" id="nameInput">
+            <input type="email" placeholder="Email*" class="input-field" id="emailInput">
+            <input type="text" placeholder="Subject" class="input-field" id="subjectInput">
+            <textarea placeholder="Write Your Message*" class="input-field" id="messageInput"></textarea>
+        </div>
+        <button class="send-button" onclick="sendEmail()">Send Message</button>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <script>
+    // Define el tipo de datos para los campos del formulario
+      interface FormValues {
+          name: string;
+          email: string;
+          subject: string;
+          message: string;
+      }
+
+      // Obtén los elementos del DOM y asigna el tipo HTMLElement
+      const nameInput: HTMLInputElement = document.getElementById('nameInput') as HTMLInputElement;
+      const emailInput: HTMLInputElement = document.getElementById('emailInput') as HTMLInputElement;
+      const subjectInput: HTMLInputElement = document.getElementById('subjectInput') as HTMLInputElement;
+      const messageInput: HTMLInputElement = document.getElementById('messageInput') as HTMLInputElement;
+
+      // Define la función para enviar el correo
+      const sendEmail = () => {
+          // Obtén los valores de los campos del formulario
+          const formValues: FormValues = {
+              name: nameInput.value,
+              email: emailInput.value,
+              subject: subjectInput.value,
+              message: messageInput.value
+          };
+
+          // Construye el enlace del correo electrónico
+          const mailtoLink = `mailto:ejemplo@gmail.com?subject=${encodeURIComponent(formValues.subject)}&body=Name: ${encodeURIComponent(formValues.name)}%0D%0AEmail: ${encodeURIComponent(formValues.email)}%0D%0AMessage: ${encodeURIComponent(formValues.message)}`;
+
+          // Abre el cliente de correo electrónico predeterminado con el enlace
+          window.location.href = mailtoLink;
+      };
+
+      // Agrega un event listener al botón para enviar el correo
+      const sendButton: HTMLButtonElement = document.querySelector('.send-button') as HTMLButtonElement;
+      sendButton.addEventListener('click', sendEmail);
+
+
+
+  </script>

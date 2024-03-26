@@ -1,0 +1,48 @@
+.faq-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd; /* Agregar línea divisora */
+}
+
+.faq-question i {
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0; /* Ocultar inicialmente */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px; /* Ajusta este valor según tus necesidades */
+}
+
+.faq-item.active .faq-question {
+  border-bottom: none; /* Remover línea divisora cuando esté activo */
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}

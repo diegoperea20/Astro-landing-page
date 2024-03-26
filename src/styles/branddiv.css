@@ -1,0 +1,13 @@
+.branddiv {
+  width: 100%;
+  height: 500px;
+  background: #202020;
+  display: grid;
+  place-items: center;
+}
+.branddiv h1 {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
