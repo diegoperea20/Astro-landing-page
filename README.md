@@ -54,7 +54,7 @@ Frequently Questions
 Contact
 
 <p align="center">
-  <img src="README-images\contact.PNG" alt="StepLast">
+  <img src="README-images\Contact.PNG" alt="StepLast">
 </p>
 
 
